@@ -11,46 +11,41 @@
 <script type="text/javascript">
 function savePdf() {
     var target = document.getElementById('view');
+        var scale = 2;
         var width = target.clientWidth;
         var height = target.clientHeight;
+        var canvas = document.createElement('canvas');
+        var scale = 2;
+       canvas.width = width * scale;
+       canvas.height = height * scale;
+
+
 
         var opts = {
+            canvas: canvas,
+            scale:scale,  
             width: width,
-            height: height,   
-            x:0,
-            y:0,
-            scrollX:0,
-            scrollY:0,           
+            height: height,       
         }
         html2canvas(target, opts).then(function (canvas) {
-            var pageData = canvas.toDataURL('image/jpeg', 1.0);
+        
 
-            var doc = new jsPDF('l', 'pt', 'a4');
+        var doc = new jsPDF('l', 'pt', 'a4');
 
-            var pageHeight = width / 840.51 * 594.3;
-            var leftHeight = height;
-            
-            var imgWidth = 840.51;
-            var imgHeight = 594.3 / width * height;
-           
+        var pageHeight = width / 840.51 * 594.3;
+        var leftHeight = height;
 
-            var position = 0;
+        var imgWidth = 840.51;
+        var imgHeight = 594.3 / width * height;
 
-            var pageData = canvas.toDataURL('image/jpeg', 1.0);
 
-            if (leftHeight < pageHeight) {
-                pdf.addImage(pageData, 'PNG', 0, 0, imgWidth, imgHeight);
-            } else {
-                while (leftHeight > 0) {
-                    pdf.addImage(pageData, 'PNG', 0, position, imgWidth, imgHeight);
-                    leftHeight -= pageHeight;
-                    position -= 594.3;
-                    if (leftWeight > 0) {
-                        pdf.addPage();
-                    }
-                }
-            }
-            doc.save('a4.pdf')            
+        var position = 0;
+
+        var pageData = canvas.toDataURL('image/jpeg', 1.0);
+
+        doc.addImage(pageData, 'PNG', 0, 0, imgWidth, imgHeight);
+
+        doc.save('a4.pdf')        
             //document.getElementById('img').src = pageData;
         });
 }
@@ -494,145 +489,7 @@ function savePdf() {
                                                                                                             <td>Married</td>
                                                                             </tr>	
                     
-                    <tr>	
-                                                                                <td>Arianna</td>
-                                                                                                            <td>Dixon</td>
-                                                                                                            <td>Female</td>
-                                                                                                            <td>21</td>
-                                                                                                            <td>a.dixon@randatmail.com</td>
-                                                                                                            <td>758-6069-26</td>
-                                                                                                            <td>Bachelor</td>
-                                                                                                            <td>Actor</td>
-                                                                                                            <td>8</td>
-                                                                                                            <td>8768</td>
-                                                                                                            <td>Single</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Kelsey</td>
-                                                                                                            <td>Elliott</td>
-                                                                                                            <td>Female</td>
-                                                                                                            <td>22</td>
-                                                                                                            <td>k.elliott@randatmail.com</td>
-                                                                                                            <td>657-6263-48</td>
-                                                                                                            <td>Upper secondary</td>
-                                                                                                            <td>Driver</td>
-                                                                                                            <td>10</td>
-                                                                                                            <td>9936</td>
-                                                                                                            <td>Single</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Alan</td>
-                                                                                                            <td>Ellis</td>
-                                                                                                            <td>Male</td>
-                                                                                                            <td>29</td>
-                                                                                                            <td>a.ellis@randatmail.com</td>
-                                                                                                            <td>211-9666-43</td>
-                                                                                                            <td>Lower secondary</td>
-                                                                                                            <td>Engineer</td>
-                                                                                                            <td>3</td>
-                                                                                                            <td>3873</td>
-                                                                                                            <td>Married</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Haris</td>
-                                                                                                            <td>Kelley</td>
-                                                                                                            <td>Male</td>
-                                                                                                            <td>30</td>
-                                                                                                            <td>h.kelley@randatmail.com</td>
-                                                                                                            <td>546-3898-55</td>
-                                                                                                            <td>Bachelor</td>
-                                                                                                            <td>Botanist</td>
-                                                                                                            <td>9</td>
-                                                                                                            <td>1997</td>
-                                                                                                            <td>Single</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Maximilian</td>
-                                                                                                            <td>Chapman</td>
-                                                                                                            <td>Male</td>
-                                                                                                            <td>27</td>
-                                                                                                            <td>m.chapman@randatmail.com</td>
-                                                                                                            <td>257-1192-59</td>
-                                                                                                            <td>Lower secondary</td>
-                                                                                                            <td>Geologist</td>
-                                                                                                            <td>1</td>
-                                                                                                            <td>9082</td>
-                                                                                                            <td>Married</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Miranda</td>
-                                                                                                            <td>Morgan</td>
-                                                                                                            <td>Female</td>
-                                                                                                            <td>19</td>
-                                                                                                            <td>m.morgan@randatmail.com</td>
-                                                                                                            <td>336-6615-72</td>
-                                                                                                            <td>Master</td>
-                                                                                                            <td>Social Worker</td>
-                                                                                                            <td>5</td>
-                                                                                                            <td>5020</td>
-                                                                                                            <td>Married</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Chelsea</td>
-                                                                                                            <td>Watson</td>
-                                                                                                            <td>Female</td>
-                                                                                                            <td>25</td>
-                                                                                                            <td>c.watson@randatmail.com</td>
-                                                                                                            <td>927-1331-22</td>
-                                                                                                            <td>Primary</td>
-                                                                                                            <td>Aeroplane Pilot</td>
-                                                                                                            <td>5</td>
-                                                                                                            <td>735</td>
-                                                                                                            <td>Married</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Vivian</td>
-                                                                                                            <td>Russell</td>
-                                                                                                            <td>Female</td>
-                                                                                                            <td>20</td>
-                                                                                                            <td>v.russell@randatmail.com</td>
-                                                                                                            <td>325-2365-18</td>
-                                                                                                            <td>Upper secondary</td>
-                                                                                                            <td>Scientist</td>
-                                                                                                            <td>8</td>
-                                                                                                            <td>5136</td>
-                                                                                                            <td>Single</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Brad</td>
-                                                                                                            <td>Ross</td>
-                                                                                                            <td>Male</td>
-                                                                                                            <td>24</td>
-                                                                                                            <td>b.ross@randatmail.com</td>
-                                                                                                            <td>745-0341-92</td>
-                                                                                                            <td>Doctoral</td>
-                                                                                                            <td>Hairdresser</td>
-                                                                                                            <td>3</td>
-                                                                                                            <td>6197</td>
-                                                                                                            <td>Single</td>
-                                                                            </tr>	
-                    
-                    <tr>	
-                                                                                <td>Amber</td>
-                                                                                                            <td>Foster</td>
-                                                                                                            <td>Female</td>
-                                                                                                            <td>19</td>
-                                                                                                            <td>a.foster@randatmail.com</td>
-                                                                                                            <td>993-8569-20</td>
-                                                                                                            <td>Doctoral</td>
-                                                                                                            <td>Dancer</td>
-                                                                                                            <td>5</td>
-                                                                                                            <td>9359</td>
-                                                                                                            <td>Single</td>
-                                                                            </tr>	
+                 
                                         </tbody>
                                     </table>
             </div> 
