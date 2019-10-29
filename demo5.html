@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>html2canvas demo</title>
+    
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+    <script src="jspdf.plugin.autotable.js"></script>
+</head>
+<script type="text/javascript">
+function savePdf() {   
+    var doc = new jsPDF();
+    // It can parse html:
+    doc.autoTable({html: '#my-table'});
+    doc.save('table.pdf');
+}
+
+</script>
+<body>
+<div>    
+        <div id="view">
+             
+           <table id="my-table" >
+							
+                <tbody><tr>	
+                                                                            <th >姓</th>
+                                                                                                        <th>名</th>
+                                                                                                        <th>性别</th>
+                                                                                                        <th>年龄</th>
+                                                                                                        <th >Email</th>
+                                                                                                        <th  width="150px" >Phone</th>
+                                                                                                        <th >Education</th>
+                                                                                                        <th >Occupation</th>
+                                                                        </tr>	
+                                                                        <tr>	
+                                                                                <td>John</td>
+                                                                                                            <td>Murray</td>
+                                                                                                            <td>Male</td>
+                                                                                                            <td>18</td>
+                                                                                                            <td>j.murray@randatmail.com</td>
+                                                                                                            <td>060-3162-65</td>
+                                                                                                            <td>Doctoral</td>
+                                                                                                            <td>Lecturer</td>
+                                                                            </tr>	
+                    
+                    <tr>	
+                                                                                <td>Sawyer</td>
+                                                                                                            <td>Hill</td>
+                                                                                                            <td>Male</td>
+                                                                                                            <td>22</td>
+                                                                                                            <td>s.hill@randatmail.com</td>
+                                                                                                            <td>890-8934-72</td>
+                                                                                                            <td>Master</td>
+                                                                                                            <td>Baker</td>
+                                                                            </tr>	
+                    
+                    <tr>	
+                                                                                <td>Camila</td>
+                                                                                                            <td>Murray</td>
+                                                                                                            <td>Female</td>
+                                                                                                            <td>18</td>
+                                                                                                            <td>c.murray@randatmail.com</td>
+                                                                                                            <td>498-5280-38</td>
+                                                                                                            <td>Lower secondary</td>
+                                                                                                            <td>Insurer</td>
+                                                                            </tr>	
+                    
+                    <tr>	
+                                                                                <td>Sophia</td>
+                                                                                                            <td>Barnes</td>
+                                                                                                            <td>Female</td>
+                                                                                                            <td>30</td>
+                                                                                                            <td>s.barnes@randatmail.com</td>
+                                                                                                            <td>641-4865-91</td>
+                                                                                                            <td>Lower secondary</td>
+                                                                                                            <td>Auditor</td>
+                                                                            </tr>	
+                    
+                    <tr>	
+                                                                                <td>Alfred</td>
+                                                                                                            <td>Riley</td>
+                                                                                                            <td>Male</td>
+                                                                                                            <td>27</td>
+                                                                                                            <td>a.riley@randatmail.com</td>
+                                                                                                            <td>728-9484-73</td>
+                                                                                                            <td>Lower secondary</td>
+                                                                                                            <td>Medic</td>
+                                                                            </tr>	
+                                                                            <tr>	
+                                                                                    <td>John</td>
+                                                                                                                <td>Murray</td>
+                                                                                                                <td>Male</td>
+                                                                                                                <td>18</td>
+                                                                                                                <td>j.murray@randatmail.com</td>
+                                                                                                                <td>060-3162-65</td>
+                                                                                                                <td>Doctoral</td>
+                                                                                                                <td>Lecturer</td>
+                                                                                </tr>	
+                        
+                        <tr>	
+                                                                                    <td>Sawyer</td>
+                                                                                                                <td>Hill</td>
+                                                                                                                <td>Male</td>
+                                                                                                                <td>22</td>
+                                                                                                                <td>s.hill@randatmail.com</td>
+                                                                                                                <td>890-8934-72</td>
+                                                                                                                <td>Master</td>
+                                                                                                                <td>Baker</td>
+                                                                                </tr>	
+                        
+                        <tr>	
+                                                                                    <td>Camila</td>
+                                                                                                                <td>Murray</td>
+                                                                                                                <td>Female</td>
+                                                                                                                <td>18</td>
+                                                                                                                <td>c.murray@randatmail.com</td>
+                                                                                                                <td>498-5280-38</td>
+                                                                                                                <td>Lower secondary</td>
+                                                                                                                <td>Insurer</td>
+                                                                                </tr>	
+                        
+                        <tr>	
+                                                                                    <td>Sophia</td>
+                                                                                                                <td>Barnes</td>
+                                                                                                                <td>Female</td>
+                                                                                                                <td>30</td>
+                                                                                                                <td>s.barnes@randatmail.com</td>
+                                                                                                                <td>641-4865-91</td>
+                                                                                                                <td>Lower secondary</td>
+                                                                                                                <td>Auditor</td>
+                                                                                </tr>	
+                        
+                        <tr>	
+                                                                                    <td>Alfred</td>
+                                                                                                                <td>Riley</td>
+                                                                                                                <td>Male</td>
+                                                                                                                <td>27</td>
+                                                                                                                <td>a.riley@randatmail.com</td>
+                                                                                                                <td>728-9484-73</td>
+                                                                                                                <td>Lower secondary</td>
+                                                                                                                <td>Medic</td>
+                                                                                </tr>	
+                                                                                <tr>	
+                                                                                        <td>John</td>
+                                                                                                                    <td>Murray</td>
+                                                                                                                    <td>Male</td>
+                                                                                                                    <td>18</td>
+                                                                                                                    <td>j.murray@randatmail.com</td>
+                                                                                                                    <td>060-3162-65</td>
+                                                                                                                    <td>Doctoral</td>
+                                                                                                                    <td>Lecturer</td>
+                                                                                    </tr>	
+                            
+                            <tr>	
+                                                                                        <td>Sawyer</td>
+                                                                                                                    <td>Hill</td>
+                                                                                                                    <td>Male</td>
+                                                                                                                    <td>22</td>
+                                                                                                                    <td>s.hill@randatmail.com</td>
+                                                                                                                    <td>890-8934-72</td>
+                                                                                                                    <td>Master</td>
+                                                                                                                    <td>Baker</td>
+                                                                                    </tr>	
+                            
+                            <tr>	
+                                                                                        <td>Camila</td>
+                                                                                                                    <td>Murray</td>
+                                                                                                                    <td>Female</td>
+                                                                                                                    <td>18</td>
+                                                                                                                    <td>c.murray@randatmail.com</td>
+                                                                                                                    <td>498-5280-38</td>
+                                                                                                                    <td>Lower secondary</td>
+                                                                                                                    <td>Insurer</td>
+                                                                                    </tr>	
+                            
+                            <tr>	
+                                                                                        <td>Sophia</td>
+                                                                                                                    <td>Barnes</td>
+                                                                                                                    <td>Female</td>
+                                                                                                                    <td>30</td>
+                                                                                                                    <td>s.barnes@randatmail.com</td>
+                                                                                                                    <td>641-4865-91</td>
+                                                                                                                    <td>Lower secondary</td>
+                                                                                                                    <td>Auditor</td>
+                                                                                    </tr>	
+                            
+                            <tr>	
+                                                                                        <td>Alfred</td>
+                                                                                                                    <td>Riley</td>
+                                                                                                                    <td>Male</td>
+                                                                                                                    <td>27</td>
+                                                                                                                    <td>a.riley@randatmail.com</td>
+                                                                                                                    <td>728-9484-73</td>
+                                                                                                                    <td>Lower secondary</td>
+                                                                                                                    <td>Medic</td>
+                                                                                    </tr>	
+                            
+                <tr>	
+                                                                            <td>Paige</td>
+                                                                                                        <td>Crawford</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>22</td>
+                                                                                                        <td>p.crawford@randatmail.com</td>
+                                                                                                        <td>114-6050-80</td>
+                                                                                                        <td>Master</td>
+                                                                                                        <td>Insurer</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Joyce</td>
+                                                                                                        <td>Roberts</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>22</td>
+                                                                                                        <td>j.roberts@randatmail.com</td>
+                                                                                                        <td>465-1130-10</td>
+                                                                                                        <td>Doctoral</td>
+                                                                                                        <td>Cook</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Martin</td>
+                                                                                                        <td>Murphy</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>30</td>
+                                                                                                        <td>m.murphy@randatmail.com</td>
+                                                                                                        <td>075-2417-03</td>
+                                                                                                        <td>Lower secondary</td>
+                                                                                                        <td>Lawer</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Miller</td>
+                                                                                                        <td>Phillips</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>18</td>
+                                                                                                        <td>m.phillips@randatmail.com</td>
+                                                                                                        <td>106-0802-10</td>
+                                                                                                        <td>Lower secondary</td>
+                                                                                                        <td>Composer</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Alexia</td>
+                                                                                                        <td>Ferguson</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>30</td>
+                                                                                                        <td>a.ferguson@randatmail.com</td>
+                                                                                                        <td>016-0757-74</td>
+                                                                                                        <td>Primary</td>
+                                                                                                        <td>Physicist</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Maria</td>
+                                                                                                        <td>Foster</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>24</td>
+                                                                                                        <td>m.foster@randatmail.com</td>
+                                                                                                        <td>312-5783-32</td>
+                                                                                                        <td>Lower secondary</td>
+                                                                                                        <td>Geologist</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>John</td>
+                                                                                                        <td>Murray</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>18</td>
+                                                                                                        <td>j.murray@randatmail.com</td>
+                                                                                                        <td>060-3162-65</td>
+                                                                                                        <td>Doctoral</td>
+                                                                                                        <td>Lecturer</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Sawyer</td>
+                                                                                                        <td>Hill</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>22</td>
+                                                                                                        <td>s.hill@randatmail.com</td>
+                                                                                                        <td>890-8934-72</td>
+                                                                                                        <td>Master</td>
+                                                                                                        <td>Baker</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Camila</td>
+                                                                                                        <td>Murray</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>18</td>
+                                                                                                        <td>c.murray@randatmail.com</td>
+                                                                                                        <td>498-5280-38</td>
+                                                                                                        <td>Lower secondary</td>
+                                                                                                        <td>Insurer</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Sophia</td>
+                                                                                                        <td>Barnes</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>30</td>
+                                                                                                        <td>s.barnes@randatmail.com</td>
+                                                                                                        <td>641-4865-91</td>
+                                                                                                        <td>Lower secondary</td>
+                                                                                                        <td>Auditor</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Alfred</td>
+                                                                                                        <td>Riley</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>27</td>
+                                                                                                        <td>a.riley@randatmail.com</td>
+                                                                                                        <td>728-9484-73</td>
+                                                                                                        <td>Lower secondary</td>
+                                                                                                        <td>Medic</td>
+                                                                        </tr>	
+                
+                                                                        <tr>	
+                                                                                <td>John</td>
+                                                                                                            <td>Murray</td>
+                                                                                                            <td>Male</td>
+                                                                                                            <td>18</td>
+                                                                                                            <td>j.murray@randatmail.com</td>
+                                                                                                            <td>060-3162-65</td>
+                                                                                                            <td>Doctoral</td>
+                                                                                                            <td>Lecturer</td>
+                                                                            </tr>	
+                    
+                    <tr>	
+                                                                                <td>Sawyer</td>
+                                                                                                            <td>Hill</td>
+                                                                                                            <td>Male</td>
+                                                                                                            <td>22</td>
+                                                                                                            <td>s.hill@randatmail.com</td>
+                                                                                                            <td>890-8934-72</td>
+                                                                                                            <td>Master</td>
+                                                                                                            <td>Baker</td>
+                                                                            </tr>	
+                    
+                    <tr>	
+                                                                                <td>Camila</td>
+                                                                                                            <td>Murray</td>
+                                                                                                            <td>Female</td>
+                                                                                                            <td>18</td>
+                                                                                                            <td>c.murray@randatmail.com</td>
+                                                                                                            <td>498-5280-38</td>
+                                                                                                            <td>Lower secondary</td>
+                                                                                                            <td>Insurer</td>
+                                                                            </tr>	
+                    
+                    <tr>	
+                                                                                <td>Sophia</td>
+                                                                                                            <td>Barnes</td>
+                                                                                                            <td>Female</td>
+                                                                                                            <td>30</td>
+                                                                                                            <td>s.barnes@randatmail.com</td>
+                                                                                                            <td>641-4865-91</td>
+                                                                                                            <td>Lower secondary</td>
+                                                                                                            <td>Auditor</td>
+                                                                            </tr>	
+                    
+                    <tr>	
+                                                                                <td>Alfred</td>
+                                                                                                            <td>Riley</td>
+                                                                                                            <td>Male</td>
+                                                                                                            <td>27</td>
+                                                                                                            <td>a.riley@randatmail.com</td>
+                                                                                                            <td>728-9484-73</td>
+                                                                                                            <td>Lower secondary</td>
+                                                                                                            <td>Medic</td>
+                                                                            </tr>	
+                                                                            <tr>	
+                                                                                    <td>John</td>
+                                                                                                                <td>Murray</td>
+                                                                                                                <td>Male</td>
+                                                                                                                <td>18</td>
+                                                                                                                <td>j.murray@randatmail.com</td>
+                                                                                                                <td>060-3162-65</td>
+                                                                                                                <td>Doctoral</td>
+                                                                                                                <td>Lecturer</td>
+                                                                                </tr>	
+                        
+                        <tr>	
+                                                                                    <td>Sawyer</td>
+                                                                                                                <td>Hill</td>
+                                                                                                                <td>Male</td>
+                                                                                                                <td>22</td>
+                                                                                                                <td>s.hill@randatmail.com</td>
+                                                                                                                <td>890-8934-72</td>
+                                                                                                                <td>Master</td>
+                                                                                                                <td>Baker</td>
+                                                                                </tr>	
+                        
+                        <tr>	
+                                                                                    <td>Camila</td>
+                                                                                                                <td>Murray</td>
+                                                                                                                <td>Female</td>
+                                                                                                                <td>18</td>
+                                                                                                                <td>c.murray@randatmail.com</td>
+                                                                                                                <td>498-5280-38</td>
+                                                                                                                <td>Lower secondary</td>
+                                                                                                                <td>Insurer</td>
+                                                                                </tr>	
+                        
+                        <tr>	
+                                                                                    <td>Sophia</td>
+                                                                                                                <td>Barnes</td>
+                                                                                                                <td>Female</td>
+                                                                                                                <td>30</td>
+                                                                                                                <td>s.barnes@randatmail.com</td>
+                                                                                                                <td>641-4865-91</td>
+                                                                                                                <td>Lower secondary</td>
+                                                                                                                <td>Auditor</td>
+                                                                                </tr>	
+                        
+                        <tr>	
+                                                                                    <td>Alfred</td>
+                                                                                                                <td>Riley</td>
+                                                                                                                <td>Male</td>
+                                                                                                                <td>27</td>
+                                                                                                                <td>a.riley@randatmail.com</td>
+                                                                                                                <td>728-9484-73</td>
+                                                                                                                <td>Lower secondary</td>
+                                                                                                                <td>Medic</td>
+                                                                                </tr>	
+                        
+               
+                                                                        
+                                    </tbody></table> 
+    <div>
+        <input type="button" value="生成PDF" onclick="savePdf()">
+    </div>
+    <img id="img" />
+</div>
+</body>
+
+</html>
