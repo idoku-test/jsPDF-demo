@@ -8,12 +8,22 @@
     
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
     <script src="jspdf.plugin.autotable.js"></script>
+    <script src="zh-normal.js"></script>
 </head>
 <script type="text/javascript">
 function savePdf() {   
     var doc = new jsPDF();
     // It can parse html:
-    doc.autoTable({html: '#my-table'});
+    doc.setFont('zh-normal')
+    doc.addFont("zh-normal.ttf", "zh", "normal");
+    doc.autoTable({
+        html: '#my-table',
+         styles: {
+            font:'zh',
+            overflow: 'linebreak'
+        },
+        theme: 'grid'
+});
     doc.save('table.pdf');
 }
 
@@ -36,9 +46,9 @@ function savePdf() {
                                                                         </tr>	
                                                                         <tr>	
                                                                                 <td>John</td>
-                                                                                                            <td>Murray</td>
-                                                                                                            <td>Male</td>
-                                                                                                            <td>18</td>
+                                                                                                            <td>酷龙</td>
+                                                                                                            <td>男</td>
+                                                                                                            <td>28</td>
                                                                                                             <td>j.murray@randatmail.com</td>
                                                                                                             <td>060-3162-65</td>
                                                                                                             <td>Doctoral</td>

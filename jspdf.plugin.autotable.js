@@ -433,14 +433,14 @@ function getTheme(name) {
     var themes = {
         'striped': {
             table: { fillColor: 255, textColor: 80, fontStyle: 'normal' },
-            head: { textColor: 255, fillColor: [41, 128, 185], fontStyle: 'bold' },
+            head: { textColor: 255, fillColor: [41, 128, 185], fontStyle: 'normal' },
             body: {},
             foot: { textColor: 255, fillColor: [41, 128, 185], fontStyle: 'bold' },
             alternateRow: { fillColor: 245 }
         },
         'grid': {
             table: { fillColor: 255, textColor: 80, fontStyle: 'normal', lineWidth: 0.1 },
-            head: { textColor: 255, fillColor: [26, 188, 156], fontStyle: 'bold', lineWidth: 0 },
+            head: { textColor: 255, fillColor: [26, 188, 156], fontStyle: 'normal', lineWidth: 0 },
             body: {},
             foot: { textColor: 255, fillColor: [26, 188, 156], fontStyle: 'bold', lineWidth: 0 },
             alternateRow: {}
